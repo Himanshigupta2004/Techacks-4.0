@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Josefin+Sans&family=Leckerli+One&family=Nunito&family=Open+Sans:ital,wght@0,300;1,300&family=PT+Sans&family=Poppins:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+    <title>Login Authentication</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container" id="createAccount">
+            <form action="#">
+                
+                <h1>Create An Account</h1>
+                <div class="social-container">
+                    <a href="https://www.facebook.com/">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.google.co.in/webhp">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="https://github.com/">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <span>Use your email for registration</span>
+                <input type="text" placeholder="Name" id="name"/>
+                <input type="email" placeholder="Email" id="email"/>
+                <input type="password" placeholder="Password" id="password">
+                <br />
+                <button class="submit" id="submit">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Sign In</h1>
+                <div class="social-container">
+                    <a href="https://www.facebook.com/">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.google.co.in/webhp">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="https://github.com/">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <span>Login to you account</span>
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" >
+                <a href="forgot_password.html">Forgot your password?</a>
+                <button>Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Have Already Account?</h1>
+                    <p>To keep connected with us please login with your account here!</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Create Your Account</h1>
+                    <p>Enter your personal details and start your journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

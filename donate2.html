@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Donation Form</title>
+<link rel="stylesheet" href="donate.css"> </head>
+<body>
+
+<div class="container">
+  <form action="" onsubmit="return onSubmit()"> <h1>Donation Form</h1>
+
+    <div class="row">
+      <div class="col">
+        <h3 class="title">Donation Details</h3>
+
+        <div class="inputBox">
+          <span>What would you like to donate?</span>
+          <select id="donation-type" name="donation-type">
+            <option value="clothes">Clothes</option>
+            <option value="sweaters">Sweaters</option>
+            <option value="stationary">Stationary</option>
+            <option value="other">Others</option>
+          </select>
+        </div>
+
+        <div class="inputBox">
+          <span>Where would you like to donate?</span>
+          <select id="donation-recipient" name="donation-recipient">
+            <option value="oldage-home">Old Age Home</option>
+            <option value="orphanage">Orphanage</option>
+            <option value="orphanage">Animal Rehabilitation</option>
+            <option value="orphanage">Children's Hospital</option>
+            <option value="other-location">Other location</option>
+          </select>
+        </div>
+
+        <div class="inputBox">
+          <span>If you selected "other" above, please provide details:</span>
+          <textarea id="other-details" name="other-details" rows="4" cols="50"></textarea>
+        </div>
+      </div>
+
+      <div class="col">
+        <h3 class="title">Your Information</h3>
+
+        <div class="inputBox">
+          <span>Full Name:</span>
+          <input type="text" placeholder="John Doe">
+        </div>
+
+        <div class="inputBox">
+          <span>Email:</span>
+          <input type="email" placeholder="example@example.com">
+        </div>
+
+        <div class="inputBox">
+          <span>Phone Number:</span>
+          <input type="tel" placeholder="+1234567890"> </div>
+      </div>
+    </div>
+
+    <input id="submitButton" type="submit" value="Submit Donation" class="submit-btn">
+  </form>
+</div>
+
+<script>
+  function onSubmit() {
+    alert("Donation form submitted! We'll contact you soon!");
+    return false; 
+  }
+</script>
+</body>
+</html>

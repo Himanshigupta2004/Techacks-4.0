@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="register.css">
+    <style>
+        /* Styles remain the same as before */
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;font-size: 50px;color: #774936;">Registration Form</h1>
+    <div class="main_div">
+            <div id="events">
+        <h2 style="text-align: center;">Upcoming Events</h2>
+        <ul type="none">
+            <li><a href="#" onclick="showRegistrationForm('Event 1', '2024-02-01')"> Banger Festival- Jan 21, 2024</a></li>
+            <br>
+            <li><a href="#" onclick="showRegistrationForm('Event 2', '2024-02-15')">G Eazy-Indian Tour - Feb 11, 2024</a></li>
+            <!-- Add more events as needed -->
+        </ul>
+    </div>
+
+    <div id="registration-form" >
+        <h2 style="text-align: center;">Event Registration</h2>
+        <p id="event-info"></p>
+        <label for="name" >Name:</label>
+        <input type="text" id="name" required>
+        <br><br>
+
+        <label for="email" >Email:</label>
+        <input type="email" id="email" required>
+        <br>
+        <br><br>
+
+        <button onclick="showPaymentForm()">Register and Pay</button>
+    </div>
+
+    <div id="payment-form" style="display: none;">
+        <h2>Payment Details</h2>
+        <br>
+        <label for="cardNumber">Card Number:</label>
+        <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+        <br><br>
+        <label for="expiryDate">Expiry Date:</label>
+        <input type="text" id="expiryDate" placeholder="MM/YY" required>
+        <br><br>
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" placeholder="123" required>
+<br><br>
+        <button onclick="completeRegistration()">Submit Payment</button>
+    </div>
+
+    <div id="ticket" style="display: none;">
+        <h3>Temporary Ticket</h3>
+        <div href="scanner"><img src="C:\Users\PC\Desktop\python.png"></div>
+        <p id="ticket-info"></p>
+    </div>
+
+    </div>
+    <script>
+        function showRegistrationForm(eventName, eventDate) {
+            // Display the registration form with event information
+            document.getElementById("event-info").innerHTML = "Event: " + eventName + "<br>Date: " + eventDate;
+            document.getElementById("registration-form").style.display = "block";
+        }
+
+        function showPaymentForm() {
+            // Hide registration form and display payment form
+            document.getElementById("registration-form").style.display = "none";
+            document.getElementById("payment-form").style.display = "block";
+        }
+
+        function completeRegistration() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var cardNumber = document.getElementById("cardNumber").value;
+            var expiryDate = document.getElementById("expiryDate").value;
+            var cvv = document.getElementById("cvv").value;
+
+            // Validate payment form fields
+            if (!cardNumber || !expiryDate || !cvv) {
+                alert("Please fill in all payment fields.");
+                return;
+            }
+
+            // Simulate API request (replace with actual payment processing)
+            var eventData = document.getElementById("event-info").innerHTML;
+            var paymentAmount = 50; // Simulated payment amount
+            var ticketInfo = "Event: " + eventData + "<br>Name: " + name + "<br>Email: " + email + "<br>Payment Amount: $" + paymentAmount;
+
+            // Display the ticket
+            document.getElementById("ticket-info").innerHTML = ticketInfo;
+            document.getElementById("ticket").style.display = "block";
+
+            // Hide the payment form
+            document.getElementById("payment-form").style.display = "none";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club/Society Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #3f4238;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #registration-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #70960c;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #thank-you-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            z-index: 1000;
+        }
+
+        #close-popup-btn {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="registration-form">
+        <h2>Club/Society Registration</h2>
+        <label for="club">Select Club/Society:</label>
+        <select id="club" required>
+            <option value="" disabled selected>Select a Club/Society</option>
+            <option value="club1">Club 1</option>
+            <option value="club2">Club 2</option>
+            <!-- Add more clubs/societies as needed -->
+        </select>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <button onclick="registerClub()">Register</button>
+    </div>
+
+    <div id="thank-you-popup">
+        <h2>Thank You for Registering!</h2>
+        <p>Your registration for [Club/Society Name] is successful.</p>
+        <button id="close-popup-btn" onclick="closeThankYouPopup()">Close</button>
+    </div>
+
+    <script>
+        function registerClub() {
+            var club = document.getElementById("club").value;
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+
+            // Validate form fields
+            if (!club || !name || !email) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            // Simulate registration (replace with actual registration logic)
+            // Display the thank you popup on successful registration
+            document.getElementById("thank-you-popup").style.display = "block";
+            document.getElementById("thank-you-popup").innerHTML = `
+                <h2>Thank You for Registering!</h2>
+                <p>Your registration for ${club} is successful.</p>
+                <button id="close-popup-btn" onclick="closeThankYouPopup()">Close</button>
+            `;
+        }
+
+        function closeThankYouPopup() {
+            // Close the thank you popup and reset the form
+            document.getElementById("thank-you-popup").style.display = "none";
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("club").selectedIndex = 0;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+body{
+    margin:10px 60px;
+    background-color:  #FFDE59;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+h4,h1,ol{
+    margin:0;
+}
+p{
+    margin: 5px 0;
+}
+textarea{
+    width: 80%;
+    height: 80px;
+}
+button{
+    display: block;
+    margin: 10px 0;
+}
+.top-bar{
+    background-color:  #73a942;
+    padding:0 40px;
+}
+.main{
+    background-color: #f6f6ef;
+    padding: 10px 40px;
+}
+.comments{
+    margin: 40px 0;
+}
+.comment{
+    margin:10px 0
+}
+.row{
+    padding:5px 0;
+}
+.bottom , .top-comment{
+    display: flex;
+    color:#808080;
+    font-size: 12px;;
+}
+.timestamp{
+    padding-right: 10px;
+}
+.top-comment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.delete-comment {
+    text-align: right;
+  }

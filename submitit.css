@@ -1,0 +1,27 @@
+body{
+    background-image: linear-gradient(to right, #bc8a5f , #8b5e34);
+}
+.main_div{
+    height: 500px;
+    width: 500px;
+    border: 1px solid black;
+    margin-left: 33%;
+    margin-top: 100px;
+    background-image:linear-gradient(to right,#e7bc91,#bc8a5f);
+    box-shadow: 20px ;
+    box-shadow: black;
+}
+a{
+    color: white;
+}
+#registration-form{
+    text-align: center;
+    margin: 20px;
+}
+#events{
+    text-align: center;
+    list-style-type:none;
+}
+#payment-form{
+    text-align: center;
+}

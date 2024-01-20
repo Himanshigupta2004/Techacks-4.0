@@ -1,0 +1,33 @@
+body{
+    margin:10px 60px;
+    background-color:  #FFDE59;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+h4,h1,ol{
+    margin:0;
+}
+p{
+    margin: 5px 0;
+}
+.top-bar{
+    background-color: #73a942;
+    padding:0 40px;
+}
+.main{
+    background-color: #f6f6ef;
+    padding: 10px 15px;
+}
+.row{
+    padding:5px 0;
+}
+.bottom{
+    display: flex;
+    color:#808080;
+    font-size: 12px;;
+}
+.timestamp{
+    padding-right: 10px;
+}
